@@ -3,7 +3,12 @@ $(document).ready(function () {
 		//console.log(event.clientX, event.clientY);
 
 		var $b = $('<div/>').addClass('bubble');
+
+	var size = Math.random() * 4;
+
 		$b.css ({
+			width: size + 'em',
+			height: size + 'em',
 			left: event.clientX,
 			top: event.clientY		
 		});
@@ -18,7 +23,7 @@ $(document).ready(function () {
 		}, 2000, function () {
 			$b.remove();
 		});
-		
+
 	}, 1400);
 };
 
